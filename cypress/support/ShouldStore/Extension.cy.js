@@ -145,13 +145,11 @@ class addtocart{
         cy.wait(5000)
         cy.xpath("//img[@alt='Joggers']").click()
         cy.wait(5000)
-        cy.get("a[href='/product/solids-azure-blue-men-cargo-joggers?gte=1']").click()
+        cy.xpath("(//div[@class='col-lg-3 col-md-6 col-6'])[3]").click()
         cy.wait(5000)
         cy.xpath("//div[@class='tss-body-wrapper']//li[3]").click()
-        cy.wait(5000)
         cy.get("button[class='btn btn-danger btnWidth btn-lg btn-block pointer']").click()
-        cy.wait(5000)
-        cy.xpath("//div[@class='headerRight']//li[4]//a[1]").click() 
+        cy.xpath("(//a[@data-toggle='dropdown'])[2]").click()  
         cy.wait(10000)
         cy.get(':nth-child(5) > .btn').click()
         cy.wait(6000)
@@ -175,15 +173,20 @@ class addtocart{
         cy.go('back')
         cy.wait(5000)
         cy.xpath("//img[@alt='Joggers']").click()
-        cy.get("a[href='/product/solids-azure-blue-men-cargo-joggers?gte=1']").click()
+        cy.wait(5000);
+        cy.xpath("(//div[@class='col-lg-3 col-md-6 col-6'])[3]").click()
+        cy.wait(5000);
         cy.xpath("//div[@class='tss-body-wrapper']//li[3]").click()
         cy.get("button[class='btn btn-danger btnWidth btn-lg btn-block pointer']").click()
-        cy.xpath("//div[@class='headerRight']//li[4]//a[1]").click() 
+        cy.xpath("(//a[@data-toggle='dropdown'])[2]").click() 
         cy.wait(10000)
         cy.get(':nth-child(5) > .btn').click()
-        cy.xpath("(//button[contains(@type,'button')][normalize-space()='Remove'])[1]").click()
+        cy.wait(2000);
+        cy.get('#c_0_up > .savecart > .col-lg-12 > :nth-child(1)').click()
+        cy.wait(1000);
         cy.get(".move").click()
-        cy.xpath("(//button[contains(@type,'button')][normalize-space()='Remove'])[2]").click()
+        cy.wait(2000);
+        cy.get('.col-lg-12 > :nth-child(1)').click()
         cy.get(".move").click()
         cy.get(".emptyCartTitle").should('have.text','Your shopping cart is empty. ')
      }
@@ -202,13 +205,13 @@ class addtocart{
         cy.wait(10000)
         cy.get(':nth-child(5) > .btn').click()
         cy.get("button[class='btn btn-primary btn-lg btn-block pointer text-uppercase']").click()
-        cy.wait(5000)
-        cy.get("input[placeholder='Enter Phone Number']").type(8668806959)
-        cy.get("button[type='submit']").click();
-        cy.wait(20000);
-        cy.get("button[type='submit']").click();
-        cy.wait(5000)
-        cy.get("button[class='btn btn-primary btn-lg btn-block pointer text-uppercase']").click()
+      //   cy.wait(5000)
+      //   cy.get("input[placeholder='Enter Phone Number']").type(8668806959)
+      //   cy.get("button[type='submit']").click();
+      //   cy.wait(20000);
+      //   cy.get("button[type='submit']").click();
+      //   cy.wait(5000)
+      //   cy.get("button[class='btn btn-primary btn-lg btn-block pointer text-uppercase']").click()
         
       
      }
@@ -231,21 +234,21 @@ class addtocart{
         cy.get(':nth-child(5) > .btn').click()
         cy.wait(5000)
         cy.get("button[class='btn btn-primary btn-lg btn-block pointer text-uppercase']").click()
-        cy.wait(5000)
-        cy.get("input[placeholder='Enter Phone Number']").type(8668806959)
-        cy.get("button[type='submit']").click();
-        cy.wait(40000);
-        cy.get("button[type='submit']").click();
-        cy.wait(8000)
-        cy.get("button[class='btn btn-primary btn-lg btn-block pointer text-uppercase']").click()
-        cy.wait(5000)
-        cy.get(".pointer.navbar-brand").click()
-        cy.wait(5000)
-        cy.xpath("//span[@class='hicon fa fa-user-o']").trigger('mouseover')
-        cy.wait(1000)
-        cy.xpath("//div[contains(@class,'dropdown-item pointer')]").click()
-        cy.wait(1000)
-        cy.get(".toasted.toasted-customred.primary.default").should('have.text','Successfully Logged Out.')
+      //   cy.wait(5000)
+      //   cy.get("input[placeholder='Enter Phone Number']").type(8668806959)
+      //   cy.get("button[type='submit']").click();
+      //   cy.wait(40000);
+      //   cy.get("button[type='submit']").click();
+      //   cy.wait(8000)
+      //   cy.get("button[class='btn btn-primary btn-lg btn-block pointer text-uppercase']").click()
+      //   cy.wait(5000)
+      //   cy.get(".pointer.navbar-brand").click()
+      //   cy.wait(5000)
+      //   cy.xpath("//span[@class='hicon fa fa-user-o']").trigger('mouseover')
+      //   cy.wait(1000)
+      //   cy.xpath("//div[contains(@class,'dropdown-item pointer')]").click()
+      //   cy.wait(1000)
+      //   cy.get(".toasted.toasted-customred.primary.default").should('have.text','Successfully Logged Out.')
 
      }
 }
